@@ -13,11 +13,10 @@ public class Socio {
     private LocalDate fecha_nacimiento;
     private String telefono;
     private String pais;
-    private static int contador = 1;
 
     public Socio(int idSocio, String nombre, String apaterno, String amaterno, String num_documento,
                  LocalDate fecha_nacimiento, String telefono, String pais){
-        this.idSocio = contador++;
+        this.idSocio = idSocio;
         this.nombre = nombre;
         this.apaterno = apaterno;
         this.amaterno = amaterno;
