@@ -1099,7 +1099,10 @@ public abstract class Controlador {
 
         // se asigna tarifa.
         Tarifa tarifa = tarifas.stream()
-                .filter(t -> t.isVigente() && t.getCancha() == canchaSeleccionada && t.getTurno() == turnoSeleccionado && t.isTarifaEspecial() == fechaEspecial)
+                .filter(t -> t.isVigente()
+                        && t.getCancha() == canchaSeleccionada
+                        && t.getTurno() == turnoSeleccionado
+                        && t.isTarifaEspecial() == fechaEspecial)
                 .findFirst()
                 .orElse(null);
 
